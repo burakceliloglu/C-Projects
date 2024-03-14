@@ -1,8 +1,9 @@
 #include <unistd.h>
 
 void	ft_putchar(char ch);
-int		ft_atoi(char *str);
+long	ft_atoi(char *str);
 void	ft_putnbr(long nb);
+void	ft_putstr(char *str);
 long	ft_calculator(long first, long second, char operator, long result);
 
 int	main(int argc, char **argv)
@@ -21,6 +22,8 @@ int	main(int argc, char **argv)
 		result = ft_calculator(first, second, operator, result);
 		ft_putnbr(result);
 	}
+	else
+		ft_putstr("Enter only 3 arguments except file name.");
 	ft_putchar('\n');
 	return (0);
 }
